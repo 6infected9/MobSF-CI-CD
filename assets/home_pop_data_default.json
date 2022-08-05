@@ -1,0 +1,13 @@
+{
+  "id": "home_incentive_float3",
+  "show_type": "lottie_anim",
+  "url": "http://vs.wshareit.com/ares/h/p/f/home_incentive_float.zip",
+  "action_type": 21,
+  "action_params": {
+    "url": "http://web.sl-activity.com/lite-incentive/lite-home.html?titlebar=hide&portal=float_ball",
+    "portal": "home_incentive_float",
+    "new_task": true,
+    "orientation": "1",
+    "style": "0"
+  }
+}

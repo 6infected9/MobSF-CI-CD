@@ -1,0 +1,12 @@
+[{
+  "id": "home_award_banner",
+  "icon_url": "http://vs.wshareit.com/ares/h/p/f/banner2.jpg",
+  "action_type": 21,
+  "action_param": {
+    "url": "http://web.sl-activity.com/lite-incentive/invite.html?portal=home_award_banner&pve_pre=/HomeActivity/home/card",
+    "portal": "home_award_banner",
+    "new_task": true,
+    "orientation": "1",
+    "style": "0"
+  }
+}]

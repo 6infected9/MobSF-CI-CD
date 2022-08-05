@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <language name="zh-cn" music="音乐" app="应用" photo="图片" video="视频" contact="联系人" file="文件" />
+    <language name="zh-tw" music="音樂" app="應用" photo="圖片" video="視頻" contact="聯繫人" file="文件" />
+    <language name="zh-hk" music="音樂" app="應用" photo="圖片" video="視頻" contact="聯繫人" file="文件" />
+    <language name="en-us" music="Music" app="Application" photo="Photo" video="Video" contact="Contact" file="File" />
+</resources>

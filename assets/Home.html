@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html {
+        font-family: Roboto-Regular, PingFang, Helvetica-Neue, Helvetica,
+          Microsoft YaHei, Avenir, Arial, sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        color: #333333;
+      }
+      * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .test {
+        font-size: 0.28rem;
+        margin: 0.5rem auto;
+      }
+      body,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        font-size: 0.28rem;
+      }
+      .header .logo {
+        margin-top: 0.39rem;
+        width: 2.63rem;
+        height: 2.79rem;
+      }
+      .header .introduction {
+        margin: 0.3rem auto 1.6rem;
+        height: 0.8rem;
+        font-size: 0.28rem;
+        font-family: ProductSans-Regular, ProductSans;
+        font-weight: 400;
+        color: #666666;
+        line-height: 0.4rem;
+      }
+      .download-content {
+        margin: auto;
+        width: 2.9rem;
+        height: 0.64rem;
+        line-height: 0.64rem;
+        background: #247fff;
+        border-radius: 0.12rem;
+        color: #ffffff;
+        font-size: 0.3rem;
+        font-family: ProductSans-Bold, ProductSans;
+        font-weight: bold;
+        color: #ffffff;
+        display: block;
+      }
+      .download-content a {
+        color: #ffffff;
+        text-decoration: none;
+        width: 2.9rem;
+        display: block;
+      }
+      .progress-content {
+        display: none;
+      }
+      .progress-bar {
+        margin: auto;
+        width: 4.6rem;
+        height: 0.19rem;
+        background: #f7f7f7;
+        border-radius: 0.12rem;
+      }
+      .progress-bar .bar {
+        width: 0;
+        height: 100%;
+        border-radius: 0.12rem;
+        background: linear-gradient(90deg, #24c1ff 0%, #247fff 100%);
+      }
+      .progress-info {
+        margin: 0.23rem auto;
+        width: 4.6rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.24rem;
+        font-family: ProductSans-Regular, ProductSans;
+        font-weight: 400;
+        color: #999999;
+      }
+
+      .progress-info .percent-wrap {
+        color: #247fff;
+      }
+      .failed-content {
+        width: 5.58rem;
+        margin: 0.37rem 0 0 0.88rem;
+        font-size: 0.24rem;
+        font-family: ProductSans-Regular, ProductSans;
+        font-weight: 400;
+        color: #333333;
+        line-height: 0.33rem;
+        position: relative;
+        display: none;
+      }
+      .failed-content img {
+        width: 0.26rem;
+        height: 0.26rem;
+        position: absolute;
+        left: -0.3rem;
+        top: 0.05rem;
+      }
+      .result {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.26rem;
+        font-family: ProductSans-Regular, ProductSans;
+        font-weight: 400;
+        color: #666666;
+      }
+      .result .result-icon {
+        margin-right: 0.16rem;
+        flex: 0 0 0.37rem;
+        height: 0.37rem;
+      }
+
+      .tips {
+        margin: 0.32rem auto 0;
+        width: 5.34rem;
+        font-size: 0.24rem;
+        color: #999999;
+        line-height: 0.33rem;
+      }
+
+      .success-content {
+        display: none;
+      }
+    </style>
+    <title>__APPNAME__</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="logo.png" alt="" class="logo" />
+        <div class="introduction">
+          <div class="intro">Phone-Pad-PC</div>
+          <div class="intro">Transfer files, so easy.</div>
+        </div>
+      </div>
+      <div class="download-content" onclick="clickDownload()">
+        <a href="/apps/__PACKAGENAME__.apk" id="link" download>DOWNLOAD</a>
+      </div>
+      <div class="progress-content">
+        <div class="progress-bar">
+          <div class="bar"></div>
+        </div>
+        <div class="progress-info">
+          <div class="size">
+            <span class="complete">0</span>MB/<span class="total">0</span>MB
+          </div>
+          <div class="percent-wrap"><span class="percent">0</span>%</div>
+        </div>
+      </div>
+      <div class="failed-content">
+        <img src="failed-icon.png" alt="" />
+        <div class="desc">
+          There are some problems with the download, please go to the browser
+          download center to check the status.
+        </div>
+      </div>
+      <div class="success-content">
+        <div class="result">
+          <img src="success-icon.png" alt="" class="result-icon" />
+          <span class="desc">Download complete</span>
+        </div>
+        <div class="tips">Go to download list to install</div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        size();
+        window.onsize = function () {
+          size();
+        };
+        function size() {
+          var winW =
+            document.body.clientWidth ||
+            window.innerWidth ||
+            document.documentElement.clientWidth;
+          document.documentElement.style.fontSize = winW / 7.5 + "px";
+        }
+      })();
+      var link = document.getElementById("link");
+      var linkHref = "";
+      function generateUniqueRecordId() {
+        var time = new Date().getTime().toString();
+        var random = Math.random().toString().substr(2, 5);
+        record_id = time + random;
+        link.href = link.href + "?record_id=" + record_id;
+        linkHref = link.href;
+        console.log("link.href:>> ", link.href);
+        console.log(linkHref);
+      }
+      generateUniqueRecordId();
+      var timer1 = "";
+      function autoDownload() {
+        link.click();
+        getDownloadProgress();
+      }
+      timer1 = window.setTimeout(autoDownload, 3000);
+      function clickDownload() {
+        window.clearTimeout(timer1);
+        getDownloadProgress();
+      }
+      var downloadDom = document.getElementsByClassName("download-content")[0];
+      var progressDom = document.getElementsByClassName("progress-content")[0];
+      var failedConDom = document.getElementsByClassName("failed-content")[0];
+      var successDom = document.getElementsByClassName("success-content")[0];
+      function updateDownloadStatus(status) {
+        if (status === "success") {
+          successDom.style.display = "block";
+          progressDom.style.display = "none";
+          failedConDom.style.display = "none";
+        }
+        if (status === "progress") {
+          progressDom.style.display = "block";
+          successDom.style.display = "none";
+          failedConDom.style.display = "none";
+        }
+        if (status === "failed") {
+          progressDom.style.display = "block";
+          failedConDom.style.display = "block";
+          successDom.style.display = "none";
+        }
+        downloadDom.style.display = "none";
+      }
+      var flag = false;
+      var timer2 = "";
+      var downloadStatus = "progress";
+      var index = linkHref.lastIndexOf("\/");
+      originUrl = linkHref.substring(0, index);
+      console.log("linkHref: ", linkHref);
+      var url = originUrl + "?method=progress&record_id=" + record_id;
+      console.log(url);
+      var xhr = new XMLHttpRequest();
+      function getDownloadProgress() {
+        xhr.open("GET", url);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+          var progressRes = xhr.responseText;
+          if (progressRes) {
+            var res = JSON.parse(progressRes);
+            console.log(res);
+            if (res.record_status == 1) {
+              flag = true;
+              updateDownloadStatus("progress");
+              updateDownloadProgress(res);
+            } else if (res.record_status == 2) {
+              if (flag) {
+                updateDownloadStatus("failed");
+              }
+              if (flag && timer2) {
+                downloadStatus = "failed";
+                window.clearTimeout(timer2);
+              }
+            } else if (res.record_status == 3) {
+              updateDownloadStatus("success");
+              if (timer2) {
+                window.clearTimeout(timer2);
+              }
+            }
+          } else {
+            console.log("---获取数据为空---");
+            timer2 = window.setTimeout(getDownloadProgress, 300);
+          }
+        };
+      }
+      var completeDom = document.getElementsByClassName("complete")[0];
+      var totalDom = document.getElementsByClassName("total")[0];
+      var percentDom = document.getElementsByClassName("percent")[0];
+      var barDom = document.getElementsByClassName("bar")[0];
+      function updateDownloadProgress(res) {
+        if (downloadStatus == "failed") {
+          return;
+        }
+        var completeSize = formatFileSize(res.complete_size);
+        var totalSize = formatFileSize(res.total_size);
+        completeDom.innerHTML = completeSize;
+        totalDom.innerHTML = totalSize;
+        var percentVal = parseInt((completeSize / totalSize) * 100);
+        percentDom.innerHTML = percentVal;
+        barDom.style.width = percentVal + "%";
+      }
+      function formatFileSize(fileSize) {
+        if (fileSize) {
+          return (fileSize / (1024 * 1024)).toFixed(2);
+        } else {
+          return 0;
+        }
+      }
+    </script>
+  </body>
+</html>

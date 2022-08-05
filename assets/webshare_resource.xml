@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <language name="zh-cn" html_title="茄子快传--即时传" html_title_jio="茄子快传--连接JIO" app_name="茄子快传" description1="带给你更极速完美的传输体验。" description2="立即安装" description3="这是茄子哥的即时分享页面，" description4="您可以零流量下载 ta 分享的文件。"  description5=" 分享了" description6="个文件" no_item="文件未显示，请尝试刷新浏览器。" />
+    <language name="zh-tw" html_title="茄子快傳--即時傳" html_title_jio="茄子快传--连接JIO" app_name="茄子快傳" description1="帶給你更極速完美的傳輸體驗。" description2="立即安裝" description3="這是茄子哥的即時分享頁面，" description4="您可以零流量下載ta 分享的文件。" description5=" 分享了" description6="個文件" no_item="文件未顯示，請嘗試刷新瀏覽器。" />
+    <language name="zh-hk" html_title="茄子快傳--即時傳" html_title_jio="茄子快传--连接JIO" app_name="茄子快傳" description1="帶給你更極速完美的傳輸體驗。" description2="立即安裝" description3="這是茄子哥的即時分享頁面，" description4="您可以零流量下載ta 分享的文件。" description5=" 分享了" description6="個文件" no_item="文件未顯示，請嘗試刷新瀏覽器。" />
+    <language name="en-us" html_title="SHAREit--WebShare" html_title_jio="SHAREit--Share to Jio" app_name="SHAREit" description1="Brings you faster sharing experience" description2="Install" description3="Download now! " description4="No need of mobile data!"  description5=" shared " description6=" files" no_item=" Files not show up. Please refresh the page or try again." />
+</resources>

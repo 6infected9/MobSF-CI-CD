@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=UTF-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,user-scalable=0,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <title>__REPLACE_HTML_TITLE__</title>
+    <script type=text/javascript>;
+    (function (win) {
+      let h;
+    let docEl = document.documentElement;
+    function setUnitA () {
+        let w = docEl.getBoundingClientRect().width;
+        let r = 20;
+        if (w === 412) {
+            r = (412 / 375) * r;
+        }
+        win.rem = w / r;
+        docEl.style.fontSize = win.rem + 'px';
+    }
+
+    win.addEventListener('resize', function () {
+        clearTimeout(h);
+        h = setTimeout(setUnitA, 300);
+    }, false);
+    win.addEventListener('pageshow', function (e) {
+        if (e.persisted) {
+            clearTimeout(h);
+            h = setTimeout(setUnitA, 300);
+        }
+    }, false);
+
+    setUnitA();
+    })(window);</script>
+    <style>body,html{font-family:PingFang SC,Helvetica Neue,Microsoft YaHei,Arial,sans-serif}*{-moz-user-select:none;-ms-user-select:none;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}input,textarea{-webkit-user-select:auto;margin:0;outline:none;padding:0}html{font-size:12px}blockquote,body,button,code,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}img{vertical-align:middle}body{background:#f6f9fa;color:#191919;height:100%;width:100%}.box .bar{background:#fff;border-bottom:1px solid #d2d2d2;border-top:1px solid #a9a9a9;display:none;height:2.66667rem;padding:.83333rem 4px}.box .bar .icon{float:left}.box .bar .icon img{height:2.66667rem;width:2.66667rem}.box .bar .info{float:left;margin-left:4px;width:calc(100% - 7.2rem)}.box .bar .info h4{font-size:1.16667rem}.box .bar .info h4,.box .bar .info p{height:1.33333rem;line-height:1.33333rem}.box .bar .info p{-o-text-overflow:ellipsis;font-size:1rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.box .bar .downqz{background:#2999f9;border-radius:3px;color:#fff;float:right;line-height:2.16667rem;margin-top:.25rem;padding:0 .66667rem;text-decoration:none}.box .bar .downqz,.box .say{font-size:1rem;text-align:center}.box .say{color:#757575;line-height:1.16667rem;margin:15px 0}.box .content{background:#fff;border:1px solid #d1d1d1;border-radius:.5rem;margin:0 8px 8px;padding:12px 10px}.box .content .listhead{height:2.66667rem;margin-bottom:12px;overflow:hidden;width:100%}.box .content .listhead .use{float:left}.box .content .listhead .use img{height:2.66667rem;width:2.66667rem}.box .content .listhead .utitle{float:left;font-size:1.16667rem;margin-left:1rem;width:calc(100% - 3.7rem)}.box .content .listhead .utitle p{-o-text-overflow:ellipsis;height:1.33333rem;line-height:1.33333rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.box .content .listhead .utitle .size{color:#757575}.box .content .listitem .title{border-bottom:1px solid #eaeaea;font-size:1.16667rem;line-height:2.5rem;margin-bottom:.83333rem}.box .content .listitem .title span{color:#757575;font-size:1rem}.box .content .listitem .item{margin-bottom:1.16667rem;overflow:hidden;width:100%}.box .content .listitem .item:last-child{margin-bottom:0}.box .content .listitem .item img{float:left;height:3.08333rem;width:3.08333rem}.box .content .listitem .item .cont{float:left;font-size:1rem;line-height:1.66667rem;margin-left:.66667rem;width:calc(100% - 6rem)}.box .content .listitem .item .cont .size{color:#757575;line-height:1.41667rem}.box .content .listitem .item .cont p{-o-text-overflow:ellipsis;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.box .content .listitem .item .down{background:url(data:image/png;base64,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) no-repeat 50%;background-size:1.5rem 1.5rem;float:right;height:1.5rem;margin-top:.75rem;width:1.5rem}</style>
+</head>
+
+<body>
+    <div class=box>
+        <div class=say>
+            <p>Download now!</p>
+            <p>No need of mobile data!</p>
+        </div>
+        <div class=content id=content>
+            <div class=listhead>
+                <div class=use>
+                    <img src=__REPLACE_USER_ICON__>
+                </div>
+                <div class=utitle>
+                    <p>__REPLACE_USER_NAME__</p>
+                    <p class=size>__REPLACE_DESCRIPTION5__
+                        <span id=number>0</span> __REPLACE_DESCRIPTION6__</p>
+                </div>
+            </div>
+            <div class=listitem>
+                <p>__REPLACE_NO_ITEM__</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script type=text/javascript>window.onload = function(){
+      var numEl = document.getElementById('number');
+      var number = 0;
+      var cont = document.getElementById("content");
+      var listItem = getByClass(cont,'listitem');
+      for(var i= 0; i<listItem.length;i++){
+          cont.removeChild(listItem[i]);
+      }
+      var browser = {
+        versions: function () {
+            var u = navigator.userAgent,app = navigator.appVersion;
+            return {
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                iPhone: u.indexOf('iPhone') > -1,
+                iPad: u.indexOf('iPad') > -1, 
+                jio: u.toLowerCase().indexOf('kaios') > -1
+            };
+        }(),
+      };
+
+      var odivlist =document.createElement('div');
+      odivlist.className = 'listitem';
+      cont.appendChild(odivlist);
+      initData();
+      function initData(){
+        ajax("wslist_jio", function(data){
+            setTimeout(function(){initData()},2000);
+            var obj = JSON.parse(data);
+            for(var i = 0;i<obj.length;i++){
+                for(var j= 0; j<obj[i].items.length;j++){
+                    var item = obj[i].items;
+                    var itemDiv =document.createElement('div');
+                    itemDiv.className = 'item';
+                    itemDiv.innerHTML = '<img src="'+item[j].thumb_url+'"/><div class="cont"> <p>'+ item[j].name+'</p><p class="size">'+item[j].size+'</p> </div> <a class="down" href="'+item[j].url+'"></a>';
+                    odivlist.appendChild(itemDiv);
+                    number++;
+                }
+            }
+            numEl.innerText = number;
+        }, function() {
+             setTimeout(function(){initData()},2000);
+        });
+      }
+  };
+  function getByClass(oParent, sClass)
+  {
+      var aEle=oParent.getElementsByTagName('*');
+      var aResult=[];
+      for(var i=0;i<aEle.length;i++)
+      {
+          if(aEle[i].className==sClass)
+          {
+              aResult.push(aEle[i]);
+          }
+      }
+      return aResult;
+  }
+  function ajax(url, fnSucc, fnFaild)
+  {
+      var oAjax=null;
+      if(window.XMLHttpRequest)
+      {
+          oAjax=new XMLHttpRequest();
+      }
+      else
+      {
+          oAjax=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      oAjax.open('GET', url, true);
+      oAjax.send();
+      oAjax.onreadystatechange=function ()
+      {
+          if(oAjax.readyState==4)
+          {
+              if(oAjax.status==200)
+              {
+                  console.log('success');
+                  fnSucc(oAjax.responseText);
+              }
+              else
+              {
+                  if(fnFaild)
+                      fnFaild(oAjax.status);
+              }
+          }
+      };
+  }</script>
+
+</html>
