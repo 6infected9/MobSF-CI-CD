@@ -29,3 +29,6 @@ jobs:
 
 ```
 ##Sample Screenshot of the output:
+
+
+<img width="966" alt="118427198-839be300-b681-11eb-8b79-92b916ffe3ef" src="https://user-images.githubusercontent.com/73776434/183712065-2c369e63-a5ab-47f0-9b51-d4c0085bdf3f.png">
