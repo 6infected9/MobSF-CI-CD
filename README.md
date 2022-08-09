@@ -1,3 +1,5 @@
+## Github Code Scanning Integration
+
 Add the following to the file ``` .github/workflows/mobsfscan_sarif.yml ```
 
 
